@@ -1,0 +1,89 @@
+//alert("Loaded");
+
+var phoneBook={
+	"Ali":"05543432",
+	"Cem":"05231121",
+	"Gül":"03124562"};
+	
+document.write("<h1>Test</h1>");
+
+function sayHi(name)
+{
+	console.log(name)
+	}
+	
+	function count(name)
+{
+	if(name.length)
+	{
+	console.log(name.length)
+	}
+	return "foo";
+	}
+	
+	function sayHiArray(array)
+	{
+	for(var i=0; i<array.length; i++)
+	{
+	console.log(array[i].length);	
+	};		
+	/* foreach kullanımı */
+	for(var i in array)
+	{
+		console.log(array[i].length)
+	};
+	console.log("\n");
+	/* while kullanımı */
+	var k=0;
+	while(k<array.length)
+	{
+		console.log(array[k++].lenght);
+		
+		}
+	
+		
+	}
+	
+	function changeColor(query)
+	{
+	var color=prompt('hangi renk?');
+	while(!validate(color))
+	{
+		 color=prompt('hangi renk?');
+	}
+	var elements=document.querySelectorAll(query);
+	elements=Array.prototype.slice.call(elements);
+	for(var n in elements)
+	{
+		var e=elements[n];
+		//debugger
+		e.style.color=color;
+	};
+	}
+	
+	changeColor("h2");
+	
+	function validate(color)
+	{
+	var renk={"red":true,"blue":true,"yellow":true,"green":true}; //OBJE OLARAK
+	if(renk[color])
+	return true;
+	else
+	return false;
+	}
+	
+	function validate2(color)
+	{
+	var renk=["red","blue","yellow","green"]; //ARRAY OLARAK
+	for(var i in renk)
+	{
+	
+	var validColor=renk[i];
+	if(color==validColor)
+	return true;
+	
+	}
+	return false;
+   } 
+   
+   
