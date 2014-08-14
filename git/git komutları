@@ -1,0 +1,48 @@
+cd klasor // yerel klasorümüz
+git init // bu klasörde çalışcaz dedik
+git add * // tüm dosyaları ekle
+git add file.c // file dosyasını ekle 
+git commit -m 'mesajınız' // mesajımızı da ekledik
+git remote add origin https://github.com/teaddict/programming-examples.git // repomuzu söyledik
+git push --force origin master // yerl klasorden githuba upload eder
+git clone git@github.com:teaddict/depo_adı.git // githubdan indirir depoyu
+git rm * // yerel klasördekileri siler
+	// git push .. dedikten sonra githubdan da silinir
+
+commit mesajı değiştirme
+git commit --amend
+git commit --amend -m "New commit message"
+->with overwrite
+git commit -a --amend -m "My new commit message"
+
+commitleri gösterme düzgün şekilde
+git log --pretty=oneline
+
+BRANCH
+
+git init
+git add *
+git commit -m "çşşl"
+git branch local
+git checkout local -> bu şekilde branch değiştirilir
+
+YENİ BRANCH OLUŞTURMAK
+git checkout hash -> *hash: bi yere gidip commitno aldık oraya geçtik
+git checkout -b local2
+
+MERGE
+git merge local -> local ve master birleşti ikisindeki dosyalarda aynı olur
+
+REVERT
+git revert HEAD~3 ->>> You could do a revert to remove the last 3 commits 
+
+git revert --no-commit 0766c053..HEAD
+git commit
+
+# Remove the latest three commits
+git back 3
+
+RESET
+git reset --hard f414f31
+git reset --soft HEAD@{1}
+git commit -m "Reverting to the state of the project at f414f31`
