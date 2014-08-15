@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script> <!--ilk jquery gelsin -->
+<script type="text/javascript" src="home.js"> </script>
 </head>
 <body>
 <h1>Selamlama</h1>
@@ -15,8 +16,11 @@
 <p class="sub-title">paragraph</p>
 
 </div>
-
+<input id="colorInput" type="text" onchange="changeColorInput()"> <!--KULLANICIDAN INPUT BEKLEDİĞİMİZİ BELİRTİR, type HANGİ TİPTE OLD. -->
+<!--<button id="changeColorBtn" onclick="changeColorInput()">ChangeColor</button>   javscript function çağırma -->
+<button id="changeColorBtn">ChangeColor</button> <!-- onclick tanımlı function çağırma -->
 </body>
-<script type="text/javascript" src="home.js">
-</script>
+
+
 </html>
+

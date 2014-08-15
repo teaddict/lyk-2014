@@ -61,7 +61,7 @@ function sayHi(name)
 	};
 	}
 	
-	changeColor("h2");
+	//changeColor("h2");
 	
 	function validate(color)
 	{
@@ -86,4 +86,55 @@ function sayHi(name)
 	return false;
    } 
    
+   
+   function changeColorInput()
+	{
+	var renk=document.getElementById("colorInput");	
+	var elements=document.querySelectorAll(".sub-title");
+	elements=Array.prototype.slice.call(elements);
+	for(var n in elements)
+	{
+		var e=elements[n];
+		//debugger
+		e.style.color=renk.value; //
+	};
+	}
+   
+   /* var colorButton=document.getElementById("changeColorBtn");	
+   colorButton.onclick=function(event)
+   {
+   	changeColorInput();
+   	}
+   	
+   //colorButton.onclick=changeColorInput();
+   */
+   
+   //JQUERY kullanımları
+   // document.ready -> bu sayfa tamamen yüklendikten sonra işlemleri yapar böylece scriptlerimizi <head> içine alabiliriz 
+   $(document).ready(workWhenReady);
+   
+   
+   
+   function workWhenReady()
+   {
+	  var myelements=$(".sub-title");
+   console.log("when it is ready: " + myelements.length);  	
+   
+   //direk buton id ile fonksiyonu eşitleyip çalıştırmak
+      $("#changeColorBtn").click(function()
+   {
+   	alert("hey");
+   	});
+   	
+   }
+	
+	//FONKSİYONU İÇERİ ALABİLİRİZ DİREK
+	/*$(document).ready( function workWhenReady() 
+   {
+	  var myelements=$(".sub-title");
+   console.log("when it is ready: " + myelements.length);  	
+   }); */
+	   
+   var myelements=$(".sub-title");
+   console.log(myelements.length);
    
